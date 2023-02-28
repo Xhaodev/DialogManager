@@ -1,0 +1,2 @@
+# DialogManager
+Android Dialog Manager
