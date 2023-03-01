@@ -1,6 +1,12 @@
 # DialogManager
 AndroidDialog Manager
 ## Usage
+
+
+```kotlin
+    implementation 'io.github.xhaodev:dialog-manager:0.0.1'
+```
+
 ```kotlin
 val dialog1 = AlertDialog.Builder(this)
     .setTitle("Dialog1")
