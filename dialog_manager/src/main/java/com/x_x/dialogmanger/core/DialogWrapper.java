@@ -1,7 +1,6 @@
 package com.x_x.dialogmanger.core;
 
 import android.app.Dialog;
-import android.util.Log;
 
 public class DialogWrapper implements Comparable<DialogWrapper> {
 
@@ -27,7 +26,6 @@ public class DialogWrapper implements Comparable<DialogWrapper> {
 
     private void observer() {
         dialog.setOnDismissListener(dialog -> {
-            Log.e("Tag", "setOnDismissListener");
             OnDismissListener listener = config.getDialogDismissListener();
             if (listener != null) {
                 listener.onDismiss(dialog);
@@ -42,7 +40,6 @@ public class DialogWrapper implements Comparable<DialogWrapper> {
             dialogQueue.promoteAndShow();
         });
         dialog.setOnShowListener(dialog -> {
-            Log.e("Tag", "setOnShowListener");
             OnShowListener listener = config.getOnShowListener();
             if (listener != null) {
                 listener.onShow(dialog);
@@ -66,7 +63,6 @@ public class DialogWrapper implements Comparable<DialogWrapper> {
 
     public void interrupt() {
         interrupted = true;
-        Log.e("interrupt", "interrupt dismiss");
         dialog.dismiss();
     }
 }

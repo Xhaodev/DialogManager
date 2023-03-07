@@ -3,7 +3,6 @@ package com.x_x.dialogmanger.core;
 import android.app.Dialog;
 import android.os.Handler;
 import android.os.Looper;
-import android.util.Log;
 
 import java.util.Iterator;
 import java.util.Objects;
@@ -96,7 +95,6 @@ class DialogQueue {
             if (dialogWrapper != null) {
                 currentDialogWrapper = dialogWrapper;
                 mainHandler.post(() -> {
-                    Log.e(Tag,"promoteAndShow show");
                     dialogWrapper.getDialog().show();
                 });
             }
